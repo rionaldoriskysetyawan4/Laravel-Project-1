@@ -5,16 +5,20 @@
         <thead>
             <tr>
                 <th>No</th>
+                <th>Kelas</th>
                 <th>Nama</th>
-                <th>Score</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($grade as $grade)
+            @foreach ($grade as $index => $grade)
             <tr>
-                <td>{{ $grade['id'] }}</td>
-                <td>{{ $grade['class_id'] }}</td>
-                <td>{{ $grade['scoring'] }}</td>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ $grade->class_id }}</td>
+                <td>                @foreach ($grade->students as $student)
+                            <li>{{ $student->name }}</li>
+                @endforeach
+            </td>
+
             </tr>
             @endforeach
         </tbody>

@@ -14,7 +14,6 @@ class Students extends Model
     // Relasi dengan Grade
     public function grade()
     {
-        // hancurkan
-        return $this->belongsTo(Grades::class, 'class_id');
+        return $this->belongsTo(Grades::class, 'class_id'); // Tentukan foreign key 'class_id'
     }
 }
