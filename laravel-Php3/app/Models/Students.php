@@ -11,6 +11,7 @@ class Students extends Model
 
     protected $fillable = ['name', 'email', 'email_verified_at', 'class_id', 'address'];
 
+    protected $with = ['grade'];
     // Relasi dengan Grade
     public function grade()
     {

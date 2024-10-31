@@ -11,7 +11,6 @@ class Grades extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
-
     // Relasi dengan Student
     public function students(): HasMany
     {

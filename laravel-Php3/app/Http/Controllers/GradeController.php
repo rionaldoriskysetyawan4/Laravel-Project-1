@@ -12,9 +12,15 @@ class GradeController extends Controller
      */
     public function index()
 {
+    $grades = Grades:: all();
+
+    $grades -> load('students');
+    
     return view('grade', [
         'title' => 'Grades',
-        'grade' => Grades::all(),
+        'grade' => $grades,
+        // 'grade' => Grades::all(),
+        
     ]);
 }
 

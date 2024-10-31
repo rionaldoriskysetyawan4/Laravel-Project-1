@@ -10,10 +10,13 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
+
     public function index()
 {
+    // $students = Students::with('grade')->get();
     return view('student', [
         'title' => 'Student',
+        //  'students'=> $students,
         'students' => Students::all(),
     ]);
 }
