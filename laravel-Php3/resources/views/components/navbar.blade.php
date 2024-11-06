@@ -11,6 +11,7 @@
                         <x-navlink href="/contact" :active="request()->is('contact')">Contact</x-navlink>
                         <x-navlink href="/student" :active="request()->is('student')">Student</x-navlink>
                         <x-navlink href="/grade" :active="request()->is('grade')">Grade</x-navlink>
+                        <x-navlink href="/department" :active="request()->is('department')">Department</x-navlink>
                     </div>
                 </div>
             </div>
@@ -79,6 +80,7 @@
             <x-navlink-mobile href="/contact" :active="request()->is('contact')">Contact</x-navlink-mobile>
             <x-navlink-mobile href="/student" :active="request()->is('student')">Student</x-navlink-mobile>
             <x-navlink-mobile href="/grade" :active="request()->is('grade')">Grade</x-navlink-mobile>
+            <x-navlink-mobile href="/department" :active="request()->is('department')">Department</x-navlink-mobile>
         </div>
 
         <div class="border-t border-gray-700 pb-3 pt-4">

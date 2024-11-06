@@ -12,13 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('grades', function (Blueprint $table) {
-            $table->id(); // Ini akan menjadi bigint unsigned
-            $table->string('class_id');
+            $table->id();
+            $table->string('deskripsi');
+            $table->string('clade_id');
             $table->string('scoring');
             $table->timestamps();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
         Schema::dropIfExists('grades');

@@ -9,12 +9,15 @@ class Students extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'email_verified_at', 'class_id', 'address'];
+    protected $fillable = [
+        'name', 
+        'email', 
+        'deskripsi', // Foreign key ke Grades
+        'clade_id',  // Foreign key ke Department
+    ];
 
-    protected $with = ['grade'];
     // Relasi dengan Grade
-    public function grade()
-    {
-        return $this->belongsTo(Grades::class, 'class_id'); // Tentukan foreign key 'class_id'
+    public function department(){
+        return $this->belongsTo(Department::class, 'clade_id');
     }
 }

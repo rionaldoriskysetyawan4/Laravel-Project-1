@@ -25,7 +25,8 @@ class StudentsFactory extends Factory
             'name' => $this->faker->name(), // Menghasilkan nama
             'email' => $this->faker->unique()->safeEmail(), // Menghasilkan email unik
             'email_verified_at' => now(), // Mengatur tanggal verifikasi email
-            'class_id' => $this->faker->numberBetween(1,3),
+            'deskripsi' => $this->faker->numberBetween(1,36),
+            'clade_id' => $this->faker->numberBetween(1,36),
             'address' => $this->faker->address(), // Menghasilkan alamat
         ];
     }

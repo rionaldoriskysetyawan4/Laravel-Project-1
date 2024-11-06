@@ -18,7 +18,8 @@ class GradesFactory extends Factory
     public function definition(): array
     {
         return [
-            'class_id' => $this->faker->randomElement(['10A', '10B', '10C']), // Menghasilkan kelas acak
+            'clade_id' => $this->faker->randomElement(0,3),
+            'deskripsi' => $this->faker->randomElement(0,5),
             'scoring' => $this->faker->numberBetween(0, 100), // Menghasilkan skor antara 0 hingga 100
         ];
     }
